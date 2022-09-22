@@ -10,16 +10,14 @@
 
 
 userinput = input('Вкажіть свій вік:')
-if userinput.isalpha():
-    print('Введіть вік цілими цифрами!')
-elif userinput.__class__(complex):
-    print('Введіть коректний вік!')
+if userinput.isalpha() or not userinput.isdigit():
+    print('Введіть вік цілими числами!')
+elif userinput.__contains__('-'):
+    print('Вік має бути позитивним числом!')
 elif userinput.__contains__(' '):
-    print('Введіть коректний вік!')
+    print('Вік не має містити пробіли')
 elif userinput == "":
-    print('Введіть коректний вік!')
-elif userinput.__class__(float):
-    print('Введіть коректний вік!')
+    print('Помилка! Пустий ввід!')
 elif userinput.__contains__('7'):
     print('Вам сьогодні пощастить!')
 else:
