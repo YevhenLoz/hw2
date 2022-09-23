@@ -11,7 +11,7 @@
 
 userinput = input('Вкажіть свій вік:')
 if userinput.isalpha() or not userinput.isdigit():
-    print('Введіть вік цілими числами!')
+    print('Помилка! Вік має бути цілим числом')
 elif userinput.__contains__('-'):
     print('Вік має бути позитивним числом!')
 elif userinput.__contains__(' '):
@@ -30,5 +30,7 @@ else:
         print('Це фільм для дорослих!')
     elif 16 <= age <= 65:
         print('А білетів вже немає!')
-    elif age > 65:
+    elif 120 >= age > 65:
         print('Покажіть пенсійне посвідчення!')
+    elif age > 120:
+        print('Cтільки не живуть!')
